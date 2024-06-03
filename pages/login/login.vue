@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<div ></div>
 		<div class="loginFrom">
 			<uv-form labelPosition="left" :model="User" :rules="rules" ref="form" :labelStyle="{ color: '#d1c2d3'}">
 				<uv-form-item label="用户"   borderBottom>
@@ -18,13 +19,16 @@
 
 <script setup>
 import { login } from '../../hook/index.js'; // 直接按名称导入login函数
-import { ref } from 'vue';
+import { reactive, ref ,toRefs} from 'vue';
 
 
-const User = ref({
+const User = reactive({
 	name: '',
 	pwd: ''
 })
+
+
+const {name,pwd} = toRefs(User)
 
 const rules = ref({
 	name: {
@@ -36,11 +40,8 @@ const rules = ref({
 	pwd:''
 })
 
-const submit = () => {
-  login(User.name,User.pwd).then(res => {
-    console.log(res)
-  })
-  console.log(User)
+const submit = async () => {
+ await login(name.value,pwd.value)
 }
 
 
