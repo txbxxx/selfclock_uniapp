@@ -18,7 +18,7 @@ export  async function login(user,pwd) {
 			//登录后存储Token
 			uni.setStorageSync('satoken', res.data.data)
 		}else{
-			log(res.data.data)
+			console.error(res.data.data)
 			// 弹出失败信息
 			uni.showToast({
 				title: "登录失败请检查账户名和密码",
@@ -28,7 +28,7 @@ export  async function login(user,pwd) {
 			})
 		}
 	}).catch(err=>{
-		log(res.data.data)
+		console.error(res.data.data)
 		// 弹出失败信息
 		uni.showToast({
 			title: "登录失败，请联系管理员",
@@ -44,16 +44,35 @@ export  async function login(user,pwd) {
 export async function register(user,pwd) {
 	const res = await Register(user,pwd).then((res)=>{
 		if (res.data.code === 200 ){
-			// 登录成功跳转
+			// 注册成功跳转道登录界面
 			uni.redirectTo({
 				url: '/pages/login/login',
 			})
-			//登录后存储Token
-			uni.setStorageSync('satoken', res.data.data)
+			//打印成功信息
+			uni.showToast({
+				title: '注册成功',
+				icon: 'success',
+				duration: 2000,
+				position: 'top'
+			})
 		}else{
+			//打印失败信息
+			uni.showToast({
+				title: "注册失败",
+				icon: 'error',
+				duration: 2000,
+				position: 'top'
+			})
 			console.log(res)
 		}
 	}).catch(err=>{
+		// 打印失败信息
+		uni.showToast({
+			title: "注册失败，请联系管理员",
+			icon: 'error',
+			duration: 2000,
+			position: 'top'
+		})
 		console.log(err)
 	})
 }

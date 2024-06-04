@@ -20,6 +20,23 @@
 </template>
 
 <script setup>
+// 登录
+import { ref,toRefs, reactive } from 'vue'
+import {register} from "../../hook";
+// 表单数据
+const User = reactive({
+  name: '',
+  pwd: ''
+})
+
+// 表单数据，解包
+const {name,pwd} = toRefs(User)
+
+// 注册
+const submit = async () => {
+  const res = await register(name.value,pwd.value)
+
+}
 
 </script>
 

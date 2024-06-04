@@ -2,7 +2,7 @@
 	<view>
 		<uv-text size="50px" align="center" bold="true" color="#7e1671" margin="100rpx 0 0 0" text="登录"></uv-text>
 		<div class="loginFrom">
-			<uv-form labelPosition="left" :model="User" :rules="rules" ref="form" :labelStyle="{ color: '#7e1671'}">
+			<uv-form labelPosition="left" :model="User"  ref="form" :labelStyle="{ color: '#7e1671'}">
 				<uv-form-item  borderBottom>
 					<uv-input color="#7e1671" prefixIcon="order" v-model="name" placeholder="请输入用户名" border="none" clearable fontSize='20px'>
 					</uv-input>
@@ -34,20 +34,20 @@ const User = reactive({
 const {name,pwd} = toRefs(User)
 
 // 表单验证规则
-const rules = {
-	name: {
-		type: 'string',
-		required: true,
-		message: '请填写姓名',
-		trigger: ['blur', 'change']
-	},
-	pwd: {
-    type: 'string',
-    required: true,
-    message: '请填写密码',
-    trigger: ['blur', 'change']
-  },
-}
+// const rules = {
+// 	name: {
+// 		type: 'string',
+// 		required: true,
+// 		message: '请填写姓名',
+// 		trigger: ['blur', 'change']
+// 	},
+// 	pwd: {
+//     type: 'string',
+//     required: true,
+//     message: '请填写密码',
+//     trigger: ['blur', 'change']
+//   },
+// }
 
 //登陆操作
 const submit = async () => {
@@ -76,7 +76,7 @@ const toRegister = () => {
 <style scoped>
 	
 .loginFrom{
-	margin-top: 70px;
+	margin-top: 40px;
 }
 
 </style>

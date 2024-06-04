@@ -1368,7 +1368,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -1412,7 +1412,7 @@ if (uni.restoreGlobal) {
       /* CLASS */
     );
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$i], ["__scopeId", "data-v-b7a6dd5d"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-icon/components/uv-icon/uv-icon.vue"]]);
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$h], ["__scopeId", "data-v-b7a6dd5d"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-icon/components/uv-icon/uv-icon.vue"]]);
   const props$c = {
     props: {
       // 文字颜色
@@ -1476,7 +1476,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -1489,7 +1489,7 @@ if (uni.restoreGlobal) {
       /* TEXT, STYLE */
     );
   }
-  const __easycom_1$4 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$h], ["__scopeId", "data-v-86e87617"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-link/components/uv-link/uv-link.vue"]]);
+  const __easycom_1$4 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$g], ["__scopeId", "data-v-86e87617"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-link/components/uv-link/uv-link.vue"]]);
   const value = {
     computed: {
       // 经处理后需要显示的值
@@ -1722,7 +1722,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
     const _component_uv_link = resolveEasycom(vue.resolveDynamicComponent("uv-link"), __easycom_1$4);
     return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
@@ -1808,7 +1808,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$g], ["__scopeId", "data-v-8da47eb3"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-text/components/uv-text/uv-text.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$f], ["__scopeId", "data-v-8da47eb3"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-text/components/uv-text/uv-text.vue"]]);
   const props$a = {
     props: {
       value: {
@@ -2125,7 +2125,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
     return vue.openBlock(), vue.createElementBlock(
       "view",
@@ -2207,7 +2207,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$f], ["__scopeId", "data-v-651602aa"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-input/components/uv-input/uv-input.vue"]]);
+  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$e], ["__scopeId", "data-v-651602aa"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-input/components/uv-input/uv-input.vue"]]);
   class MPAnimation {
     constructor(options, _this) {
       this.options = options;
@@ -2568,7 +2568,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return $data.isShow ? (vue.openBlock(), vue.createElementBlock("view", {
       key: 0,
       ref: "ani",
@@ -2580,7 +2580,7 @@ if (uni.restoreGlobal) {
       vue.renderSlot(_ctx.$slots, "default")
     ], 14, ["animation"])) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$e], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-transition/components/uv-transition/uv-transition.vue"]]);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$d], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-transition/components/uv-transition/uv-transition.vue"]]);
   const props$9 = {
     props: {
       color: {
@@ -2640,7 +2640,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -2652,7 +2652,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$d], ["__scopeId", "data-v-dcf8cb8f"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-line/components/uv-line/uv-line.vue"]]);
+  const __easycom_2$2 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$c], ["__scopeId", "data-v-dcf8cb8f"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-line/components/uv-line/uv-line.vue"]]);
   const props$8 = {
     props: {
       // input的label提示语
@@ -2754,7 +2754,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
     const _component_uv_transition = resolveEasycom(vue.resolveDynamicComponent("uv-transition"), __easycom_1$2);
     const _component_uv_line = resolveEasycom(vue.resolveDynamicComponent("uv-line"), __easycom_2$2);
@@ -2861,7 +2861,7 @@ if (uni.restoreGlobal) {
       }, null, 8, ["color"])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$c], ["__scopeId", "data-v-d1e73275"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-form/components/uv-form-item/uv-form-item.vue"]]);
+  const __easycom_2$1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$b], ["__scopeId", "data-v-d1e73275"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-form/components/uv-form-item/uv-form-item.vue"]]);
   function colorGradient(startColor = "rgb(0, 0, 0)", endColor = "rgb(255, 255, 255)", step = 10) {
     const startRGB = hexToRgb(startColor, false);
     const startR = startRGB[0];
@@ -3073,7 +3073,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -3136,7 +3136,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$b], ["__scopeId", "data-v-29b619ea"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$a], ["__scopeId", "data-v-29b619ea"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-loading-icon/components/uv-loading-icon/uv-loading-icon.vue"]]);
   const props$6 = {
     props: {
       // 是否细边框
@@ -3414,7 +3414,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_loading_icon = resolveEasycom(vue.resolveDynamicComponent("uv-loading-icon"), __easycom_0$3);
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
     return vue.openBlock(), vue.createElementBlock(
@@ -3505,7 +3505,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$a], ["__scopeId", "data-v-ae8e42c7"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-button/components/uv-button/uv-button.vue"]]);
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$9], ["__scopeId", "data-v-ae8e42c7"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-button/components/uv-button/uv-button.vue"]]);
   const props$5 = {
     props: {
       // 当前form的需要验证字段的集合
@@ -4436,7 +4436,7 @@ if (uni.restoreGlobal) {
       return validators[this.getType(rule)] || false;
     }
   };
-  Schema.register = function register(type2, validator) {
+  Schema.register = function register2(type2, validator) {
     if (typeof validator !== "function") {
       throw new Error("Cannot register a validator by type, validator is not a function");
     }
@@ -4605,15 +4605,15 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uv-form" }, [
       vue.renderSlot(_ctx.$slots, "default")
     ]);
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$9], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-form/components/uv-form/uv-form.vue"]]);
-  const Url = "http://localhost:8081";
+  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$8], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-form/components/uv-form/uv-form.vue"]]);
+  const Url = "http://192.168.31.193:8081";
   const Login$1 = Url + "/loginUser";
-  const Register = Url + "/registerUser";
+  const Register$1 = Url + "/registerUser";
   const Logout = Url + "/logoutUser";
   const ListSchedule = Url + "/findAllSchedule";
   const AddSchedule = Url + "/addSchedule";
@@ -4640,7 +4640,7 @@ if (uni.restoreGlobal) {
     ListTask,
     Login: Login$1,
     Logout,
-    Register,
+    Register: Register$1,
     UpdateTask
   }, Symbol.toStringTag, { value: "Module" }));
   const api = {
@@ -4649,6 +4649,16 @@ if (uni.restoreGlobal) {
   const Login = (user, pwd) => {
     return uni.request({
       url: api.Demo.Login,
+      method: "POST",
+      data: {
+        username: user,
+        password: pwd
+      }
+    });
+  };
+  const Register = (user, pwd) => {
+    return uni.request({
+      url: api.Demo.Register,
       method: "POST",
       data: {
         username: user,
@@ -4670,7 +4680,7 @@ if (uni.restoreGlobal) {
         });
         uni.setStorageSync("satoken", res2.data.data);
       } else {
-        log(res2.data.data);
+        formatAppLog("error", "at hook/Login.js:21", res2.data.data);
         uni.showToast({
           title: "登录失败请检查账户名和密码",
           icon: "error",
@@ -4679,13 +4689,44 @@ if (uni.restoreGlobal) {
         });
       }
     }).catch((err) => {
-      log(res.data.data);
+      formatAppLog("error", "at hook/Login.js:31", res.data.data);
       uni.showToast({
         title: "登录失败，请联系管理员",
         icon: "error",
         duration: 2e3,
         position: "top"
       });
+    });
+  }
+  async function register(user, pwd) {
+    await Register(user, pwd).then((res) => {
+      if (res.data.code === 200) {
+        uni.redirectTo({
+          url: "/pages/login/login"
+        });
+        uni.showToast({
+          title: "注册成功",
+          icon: "success",
+          duration: 2e3,
+          position: "top"
+        });
+      } else {
+        uni.showToast({
+          title: "注册失败",
+          icon: "error",
+          duration: 2e3,
+          position: "top"
+        });
+        formatAppLog("log", "at hook/Login.js:66", res);
+      }
+    }).catch((err) => {
+      uni.showToast({
+        title: "注册失败，请联系管理员",
+        icon: "error",
+        duration: 2e3,
+        position: "top"
+      });
+      formatAppLog("log", "at hook/Login.js:76", err);
     });
   }
   const _sfc_main$b = {
@@ -4696,20 +4737,6 @@ if (uni.restoreGlobal) {
         pwd: ""
       });
       const { name, pwd } = vue.toRefs(User);
-      const rules2 = {
-        name: {
-          type: "string",
-          required: true,
-          message: "请填写姓名",
-          trigger: ["blur", "change"]
-        },
-        pwd: {
-          type: "string",
-          required: true,
-          message: "请填写密码",
-          trigger: ["blur", "change"]
-        }
-      };
       const submit = async () => {
         await login(name.value, pwd.value).then((res) => {
           if (res === null) {
@@ -4744,7 +4771,6 @@ if (uni.restoreGlobal) {
             vue.createVNode(_component_uv_form, {
               labelPosition: "left",
               model: User,
-              rules: rules2,
               ref: "form",
               labelStyle: { color: "#7e1671" }
             }, {
@@ -4837,7 +4863,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4851,7 +4877,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$8], ["__scopeId", "data-v-f5bd6f5a"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar.vue"]]);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$7], ["__scopeId", "data-v-f5bd6f5a"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-status-bar/components/uv-status-bar/uv-status-bar.vue"]]);
   const props$3 = {
     props: {
       // 是否开启顶部安全区适配
@@ -4999,7 +5025,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_status_bar = resolveEasycom(vue.resolveDynamicComponent("uv-status-bar"), __easycom_0$2);
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uv-navbar" }, [
@@ -5117,7 +5143,7 @@ if (uni.restoreGlobal) {
       )
     ]);
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$7], ["__scopeId", "data-v-16f3e502"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-navbar/components/uv-navbar/uv-navbar.vue"]]);
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$6], ["__scopeId", "data-v-16f3e502"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-navbar/components/uv-navbar/uv-navbar.vue"]]);
   const props$2 = {
     props: {
       // 是否显示圆点
@@ -5237,7 +5263,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return _ctx.show && ((Number(_ctx.value) === 0 ? _ctx.showZero : true) || _ctx.isDot) ? (vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -5250,7 +5276,7 @@ if (uni.restoreGlobal) {
       /* TEXT, CLASS, STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$6], ["__scopeId", "data-v-91e4945b"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-badge/components/uv-badge/uv-badge.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$5], ["__scopeId", "data-v-91e4945b"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-badge/components/uv-badge/uv-badge.vue"]]);
   const props$1 = {
     props: {
       // item标签的名称，作为与uv-tabbar的value参数匹配的标识符
@@ -5338,7 +5364,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
     const _component_uv_badge = resolveEasycom(vue.resolveDynamicComponent("uv-badge"), __easycom_1$1);
     return vue.openBlock(), vue.createElementBlock(
@@ -5392,7 +5418,7 @@ if (uni.restoreGlobal) {
       /* STYLE */
     );
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$5], ["__scopeId", "data-v-f9097980"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-tabbar/components/uv-tabbar-item/uv-tabbar-item.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$4], ["__scopeId", "data-v-f9097980"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-tabbar/components/uv-tabbar-item/uv-tabbar-item.vue"]]);
   const _sfc_main$6 = {
     name: "uv-safe-bottom",
     mixins: [mpMixin, mixin],
@@ -5411,7 +5437,7 @@ if (uni.restoreGlobal) {
     mounted() {
     }
   };
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -5423,7 +5449,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$4], ["__scopeId", "data-v-560f16b2"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom.vue"]]);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$3], ["__scopeId", "data-v-560f16b2"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-safe-bottom/components/uv-safe-bottom/uv-safe-bottom.vue"]]);
   const props = {
     props: {
       // 当前匹配项的name
@@ -5526,7 +5552,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_safe_bottom = resolveEasycom(vue.resolveDynamicComponent("uv-safe-bottom"), __easycom_0);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uv-tabbar" }, [
       vue.createElementVNode(
@@ -5561,19 +5587,19 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$3], ["__scopeId", "data-v-cae58123"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-tabbar/components/uv-tabbar/uv-tabbar.vue"]]);
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$2], ["__scopeId", "data-v-cae58123"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-tabbar/components/uv-tabbar/uv-tabbar.vue"]]);
   const _sfc_main$4 = {};
-  function _sfc_render$2(_ctx, _cache) {
+  function _sfc_render$1(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("h1", null, "This is indexPage")
     ]);
   }
-  const PagesIndexPageIndexPage = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$2], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/indexPage/indexPage.vue"]]);
+  const PagesIndexPageIndexPage = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$1], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/indexPage/indexPage.vue"]]);
   const _sfc_main$3 = {};
-  function _sfc_render$1(_ctx, _cache) {
+  function _sfc_render(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view");
   }
-  const PagesContentContent = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/content/content.vue"]]);
+  const PagesContentContent = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/content/content.vue"]]);
   const _sfc_main$2 = {
     __name: "index",
     setup(__props) {
@@ -5638,82 +5664,94 @@ if (uni.restoreGlobal) {
     }
   };
   const PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/index/index.vue"]]);
-  const _sfc_main$1 = {};
-  function _sfc_render(_ctx, _cache) {
-    const _component_uv_text = resolveEasycom(vue.resolveDynamicComponent("uv-text"), __easycom_0$4);
-    const _component_uv_input = resolveEasycom(vue.resolveDynamicComponent("uv-input"), __easycom_1$3);
-    const _component_uv_form_item = resolveEasycom(vue.resolveDynamicComponent("uv-form-item"), __easycom_2$1);
-    const _component_uv_button = resolveEasycom(vue.resolveDynamicComponent("uv-button"), __easycom_3);
-    const _component_uv_form = resolveEasycom(vue.resolveDynamicComponent("uv-form"), __easycom_4);
-    return vue.openBlock(), vue.createElementBlock("view", null, [
-      vue.createVNode(_component_uv_text, {
-        size: "50px",
-        align: "center",
-        bold: "true",
-        color: "#8076a3",
-        margin: "100rpx 0 0 0",
-        text: "注册"
-      }),
-      vue.createElementVNode("div", { class: "loginFrom" }, [
-        vue.createVNode(_component_uv_form, {
-          labelPosition: "left",
-          model: _ctx.User,
-          rules: _ctx.rules,
-          ref: "form",
-          labelStyle: { color: "#8076a3" }
-        }, {
-          default: vue.withCtx(() => [
-            vue.createVNode(_component_uv_form_item, { borderBottom: "" }, {
+  const _sfc_main$1 = {
+    __name: "register",
+    setup(__props) {
+      const User = vue.reactive({
+        name: "",
+        pwd: ""
+      });
+      const { name, pwd } = vue.toRefs(User);
+      const submit = async () => {
+        await register(name.value, pwd.value);
+      };
+      return (_ctx, _cache) => {
+        const _component_uv_text = resolveEasycom(vue.resolveDynamicComponent("uv-text"), __easycom_0$4);
+        const _component_uv_input = resolveEasycom(vue.resolveDynamicComponent("uv-input"), __easycom_1$3);
+        const _component_uv_form_item = resolveEasycom(vue.resolveDynamicComponent("uv-form-item"), __easycom_2$1);
+        const _component_uv_button = resolveEasycom(vue.resolveDynamicComponent("uv-button"), __easycom_3);
+        const _component_uv_form = resolveEasycom(vue.resolveDynamicComponent("uv-form"), __easycom_4);
+        return vue.openBlock(), vue.createElementBlock("view", null, [
+          vue.createVNode(_component_uv_text, {
+            size: "50px",
+            align: "center",
+            bold: "true",
+            color: "#8076a3",
+            margin: "100rpx 0 0 0",
+            text: "注册"
+          }),
+          vue.createElementVNode("div", { class: "loginFrom" }, [
+            vue.createVNode(_component_uv_form, {
+              labelPosition: "left",
+              model: User,
+              rules: _ctx.rules,
+              ref: "form",
+              labelStyle: { color: "#8076a3" }
+            }, {
               default: vue.withCtx(() => [
-                vue.createVNode(_component_uv_input, {
-                  color: "#8076a3",
-                  prefixIcon: "order",
-                  modelValue: _ctx.name,
-                  "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => _ctx.name = $event),
-                  placeholder: "请输入用户名",
-                  border: "none",
-                  clearable: "",
-                  fontSize: "20px"
-                }, null, 8, ["modelValue"])
+                vue.createVNode(_component_uv_form_item, { borderBottom: "" }, {
+                  default: vue.withCtx(() => [
+                    vue.createVNode(_component_uv_input, {
+                      color: "#8076a3",
+                      prefixIcon: "order",
+                      modelValue: vue.unref(name),
+                      "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => vue.isRef(name) ? name.value = $event : null),
+                      placeholder: "请输入用户名",
+                      border: "none",
+                      clearable: "",
+                      fontSize: "20px"
+                    }, null, 8, ["modelValue"])
+                  ]),
+                  _: 1
+                  /* STABLE */
+                }),
+                vue.createVNode(_component_uv_form_item, { borderBottom: "" }, {
+                  default: vue.withCtx(() => [
+                    vue.createVNode(_component_uv_input, {
+                      color: "#8076a3",
+                      prefixIcon: "lock",
+                      modelValue: vue.unref(pwd),
+                      "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => vue.isRef(pwd) ? pwd.value = $event : null),
+                      placeholder: "请输入密码",
+                      border: "none",
+                      clearable: "",
+                      password: "",
+                      fontSize: "20px"
+                    }, null, 8, ["modelValue"])
+                  ]),
+                  _: 1
+                  /* STABLE */
+                }),
+                vue.createVNode(_component_uv_button, {
+                  color: "#131124",
+                  text: "登录",
+                  customStyle: "margin-top: 10px",
+                  onClick: submit
+                })
               ]),
               _: 1
               /* STABLE */
-            }),
-            vue.createVNode(_component_uv_form_item, { borderBottom: "" }, {
-              default: vue.withCtx(() => [
-                vue.createVNode(_component_uv_input, {
-                  color: "#8076a3",
-                  prefixIcon: "lock",
-                  modelValue: _ctx.pwd,
-                  "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => _ctx.pwd = $event),
-                  placeholder: "请输入密码",
-                  border: "none",
-                  clearable: "",
-                  password: "",
-                  fontSize: "20px"
-                }, null, 8, ["modelValue"])
-              ]),
-              _: 1
-              /* STABLE */
-            }),
-            vue.createVNode(_component_uv_button, {
-              color: "#131124",
-              text: "登录",
-              customStyle: "margin-top: 10px",
-              onClick: _ctx.submit
-            }, null, 8, ["onClick"])
-          ]),
-          _: 1
-          /* STABLE */
-        }, 8, ["model", "rules"]),
-        vue.createElementVNode("view", {
-          class: "register",
-          style: { "margin-top": "30rpx" }
-        })
-      ])
-    ]);
-  }
-  const PagesRegisterRegister = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/register/register.vue"]]);
+            }, 8, ["model", "rules"]),
+            vue.createElementVNode("view", {
+              class: "register",
+              style: { "margin-top": "30rpx" }
+            })
+          ])
+        ]);
+      };
+    }
+  };
+  const PagesRegisterRegister = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/pages/register/register.vue"]]);
   __definePage("pages/login/login", PagesLoginLogin);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/content/content", PagesContentContent);
