@@ -12,3 +12,15 @@ export const Login = (user,pwd) => {
 		}
 	})
 }
+
+//注册功能
+export const Register = (user,pwd) => {
+	return uni.request({
+		url: api.Demo.Register,
+		method: "POST",
+		data: {
+			username: user,
+			password: pwd
+		}
+	})
+}

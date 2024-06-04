@@ -1,14 +1,19 @@
 import App from './App'
 
+
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
+import uvUI from '@/uni_modules/uv-ui-tools'
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
   ...App
 })
+Vue.use(uvUI);
 app.$mount()
+
+app.use(uvUI);
 // #endif
 
 // #ifdef VUE3
