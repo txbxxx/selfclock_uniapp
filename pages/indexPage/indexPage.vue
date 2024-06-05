@@ -51,7 +51,6 @@ onMounted(() => {
   const userLearnData = getUserLearnData().then(res => {
     learnDate.value = res;
   });
-
 });
 </script>
 
