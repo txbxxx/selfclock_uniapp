@@ -3,7 +3,7 @@ import {Login, Register} from "../service/index"
 
 export  async function login(user,pwd) {
 	const res =  await Login(user,pwd).then((res)=>{
-		if (res.data.code === 200 ){
+		if (res.code === 200 ){
 			// 登录成功跳转
 			uni.redirectTo({
 				url: '/pages/index/index',
@@ -16,9 +16,10 @@ export  async function login(user,pwd) {
 				position: 'top'
 			})
 			//登录后存储Token
-			uni.setStorageSync('satoken', res.data.data)
+			uni.setStorageSync('satoken', res.data)
+			console.log(uni.getStorageSync('satoken'))
 		}else{
-			console.error(res.data.data)
+			console.error(res.data)
 			// 弹出失败信息
 			uni.showToast({
 				title: "登录失败请检查账户名和密码",
@@ -28,7 +29,7 @@ export  async function login(user,pwd) {
 			})
 		}
 	}).catch(err=>{
-		console.error(res.data.data)
+		console.error(res.data)
 		// 弹出失败信息
 		uni.showToast({
 			title: "登录失败，请联系管理员",
@@ -43,7 +44,8 @@ export  async function login(user,pwd) {
 //注册
 export async function register(user,pwd) {
 	const res = await Register(user,pwd).then((res)=>{
-		if (res.data.code === 200 ){
+		if (res.code === 200 ){
+			console.log(res)
 			// 注册成功跳转道登录界面
 			uni.redirectTo({
 				url: '/pages/login/login',

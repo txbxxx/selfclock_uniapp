@@ -1,9 +1,10 @@
 import * as Demo  from '../api/index.js'
 import api from "../api"
+import request from "../until/request";
 
 //登录
 export const Login = (user,pwd) => {
-	return uni.request({
+	return request({
 		url: api.Demo.Login,
 		method: "POST",
 		data: {
@@ -15,7 +16,7 @@ export const Login = (user,pwd) => {
 
 //注册功能
 export const Register = (user,pwd) => {
-	return uni.request({
+	return request({
 		url: api.Demo.Register,
 		method: "POST",
 		data: {

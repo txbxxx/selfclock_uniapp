@@ -1489,7 +1489,7 @@ if (uni.restoreGlobal) {
       /* TEXT, STYLE */
     );
   }
-  const __easycom_1$4 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$g], ["__scopeId", "data-v-86e87617"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-link/components/uv-link/uv-link.vue"]]);
+  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$g], ["__scopeId", "data-v-86e87617"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-link/components/uv-link/uv-link.vue"]]);
   const value = {
     computed: {
       // 经处理后需要显示的值
@@ -1724,7 +1724,7 @@ if (uni.restoreGlobal) {
   };
   function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
-    const _component_uv_link = resolveEasycom(vue.resolveDynamicComponent("uv-link"), __easycom_1$4);
+    const _component_uv_link = resolveEasycom(vue.resolveDynamicComponent("uv-link"), __easycom_1$3);
     return _ctx.show ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -2207,7 +2207,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$e], ["__scopeId", "data-v-651602aa"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-input/components/uv-input/uv-input.vue"]]);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$e], ["__scopeId", "data-v-651602aa"], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-input/components/uv-input/uv-input.vue"]]);
   class MPAnimation {
     constructor(options, _this) {
       this.options = options;
@@ -2580,7 +2580,7 @@ if (uni.restoreGlobal) {
       vue.renderSlot(_ctx.$slots, "default")
     ], 14, ["animation"])) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$d], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-transition/components/uv-transition/uv-transition.vue"]]);
+  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$d], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-transition/components/uv-transition/uv-transition.vue"]]);
   const props$9 = {
     props: {
       color: {
@@ -2756,7 +2756,7 @@ if (uni.restoreGlobal) {
   };
   function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$5);
-    const _component_uv_transition = resolveEasycom(vue.resolveDynamicComponent("uv-transition"), __easycom_1$2);
+    const _component_uv_transition = resolveEasycom(vue.resolveDynamicComponent("uv-transition"), __easycom_4);
     const _component_uv_line = resolveEasycom(vue.resolveDynamicComponent("uv-line"), __easycom_2$2);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uv-form-item" }, [
       vue.createElementVNode(
@@ -4610,7 +4610,7 @@ if (uni.restoreGlobal) {
       vue.renderSlot(_ctx.$slots, "default")
     ]);
   }
-  const __easycom_4 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$8], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-form/components/uv-form/uv-form.vue"]]);
+  const __easycom_5 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$8], ["__file", "G:/learn_code/uniapp/selfClock/self-clock_uniapp/uni_modules/uv-form/components/uv-form/uv-form.vue"]]);
   const Url = "http://192.168.31.193:8081";
   const Login$1 = Url + "/loginUser";
   const Register$1 = Url + "/registerUser";
@@ -4701,6 +4701,7 @@ if (uni.restoreGlobal) {
   async function register(user, pwd) {
     await Register(user, pwd).then((res) => {
       if (res.data.code === 200) {
+        formatAppLog("log", "at hook/Login.js:47", res);
         uni.redirectTo({
           url: "/pages/login/login"
         });
@@ -4717,7 +4718,7 @@ if (uni.restoreGlobal) {
           duration: 2e3,
           position: "top"
         });
-        formatAppLog("log", "at hook/Login.js:66", res);
+        formatAppLog("log", "at hook/Login.js:67", res);
       }
     }).catch((err) => {
       uni.showToast({
@@ -4726,7 +4727,7 @@ if (uni.restoreGlobal) {
         duration: 2e3,
         position: "top"
       });
-      formatAppLog("log", "at hook/Login.js:76", err);
+      formatAppLog("log", "at hook/Login.js:77", err);
     });
   }
   const _sfc_main$b = {
@@ -4737,15 +4738,35 @@ if (uni.restoreGlobal) {
         pwd: ""
       });
       const { name, pwd } = vue.toRefs(User);
+      const rulesFrom = {
+        name: {
+          type: "string",
+          required: true,
+          message: "请填写姓名",
+          trigger: ["blur", "change"]
+        },
+        pwd: {
+          type: "string",
+          required: true,
+          message: "请填写密码",
+          trigger: ["blur", "change"]
+        }
+      };
+      const formRef = vue.ref(null);
       const submit = async () => {
-        await login(name.value, pwd.value).then((res) => {
-          if (res === null) {
-            uni.showToast({
-              title: "用户名或密码错误",
-              icon: "none"
-            });
-          }
+        await formRef.value.validate().then((value2) => {
+          uni.showToast({
+            icon: "success",
+            title: "校验通过"
+          });
         });
+        const res = await login(User.name, User.pwd);
+        if (res === null) {
+          uni.showToast({
+            title: "用户名或密码错误",
+            icon: "none"
+          });
+        }
       };
       const toRegister = () => {
         uni.redirectTo({
@@ -4754,10 +4775,10 @@ if (uni.restoreGlobal) {
       };
       return (_ctx, _cache) => {
         const _component_uv_text = resolveEasycom(vue.resolveDynamicComponent("uv-text"), __easycom_0$4);
-        const _component_uv_input = resolveEasycom(vue.resolveDynamicComponent("uv-input"), __easycom_1$3);
+        const _component_uv_input = resolveEasycom(vue.resolveDynamicComponent("uv-input"), __easycom_1$2);
         const _component_uv_form_item = resolveEasycom(vue.resolveDynamicComponent("uv-form-item"), __easycom_2$1);
         const _component_uv_button = resolveEasycom(vue.resolveDynamicComponent("uv-button"), __easycom_3);
-        const _component_uv_form = resolveEasycom(vue.resolveDynamicComponent("uv-form"), __easycom_4);
+        const _component_uv_form = resolveEasycom(vue.resolveDynamicComponent("uv-form"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", null, [
           vue.createVNode(_component_uv_text, {
             size: "50px",
@@ -4771,7 +4792,9 @@ if (uni.restoreGlobal) {
             vue.createVNode(_component_uv_form, {
               labelPosition: "left",
               model: User,
-              ref: "form",
+              rules: rulesFrom,
+              ref_key: "formRef",
+              ref: formRef,
               labelStyle: { color: "#7e1671" }
             }, {
               default: vue.withCtx(() => [
@@ -5669,18 +5692,43 @@ if (uni.restoreGlobal) {
     setup(__props) {
       const User = vue.reactive({
         name: "",
-        pwd: ""
+        pwd: "",
+        anewPwd: ""
       });
-      const { name, pwd } = vue.toRefs(User);
+      const { name, pwd, anewPwd } = vue.toRefs(User);
+      const show = vue.ref(false);
+      const rulesFrom = {
+        name: [
+          { required: true, message: "请输入用户名", trigger: "submit" },
+          { min: 3, max: 5, message: "长度在 3 到 6 个字符", trigger: "submit" }
+        ],
+        pwd: [
+          { required: true, message: "请输入密码", trigger: "submit" },
+          { min: 3, max: 5, message: "长度在 3 到 6 个字符", trigger: "submit" }
+        ],
+        anewPwd: [
+          { required: true, message: "请再次输入密码", trigger: "submit" },
+          { min: 3, max: 5, message: "长度在 3 到 6 个字符", trigger: "submit" }
+        ]
+      };
       const submit = async () => {
+        show.value = !show.value;
+        if (pwd.value !== anewPwd.value) {
+          uni.showToast({
+            title: "两次密码输入不一致",
+            icon: "none"
+          });
+          return;
+        }
         await register(name.value, pwd.value);
       };
       return (_ctx, _cache) => {
         const _component_uv_text = resolveEasycom(vue.resolveDynamicComponent("uv-text"), __easycom_0$4);
-        const _component_uv_input = resolveEasycom(vue.resolveDynamicComponent("uv-input"), __easycom_1$3);
+        const _component_uv_input = resolveEasycom(vue.resolveDynamicComponent("uv-input"), __easycom_1$2);
         const _component_uv_form_item = resolveEasycom(vue.resolveDynamicComponent("uv-form-item"), __easycom_2$1);
         const _component_uv_button = resolveEasycom(vue.resolveDynamicComponent("uv-button"), __easycom_3);
-        const _component_uv_form = resolveEasycom(vue.resolveDynamicComponent("uv-form"), __easycom_4);
+        const _component_uv_transition = resolveEasycom(vue.resolveDynamicComponent("uv-transition"), __easycom_4);
+        const _component_uv_form = resolveEasycom(vue.resolveDynamicComponent("uv-form"), __easycom_5);
         return vue.openBlock(), vue.createElementBlock("view", null, [
           vue.createVNode(_component_uv_text, {
             size: "50px",
@@ -5694,7 +5742,7 @@ if (uni.restoreGlobal) {
             vue.createVNode(_component_uv_form, {
               labelPosition: "left",
               model: User,
-              rules: _ctx.rules,
+              rules: rulesFrom,
               ref: "form",
               labelStyle: { color: "#8076a3" }
             }, {
@@ -5732,16 +5780,38 @@ if (uni.restoreGlobal) {
                   _: 1
                   /* STABLE */
                 }),
+                vue.createVNode(_component_uv_form_item, { borderBottom: "" }, {
+                  default: vue.withCtx(() => [
+                    vue.createVNode(_component_uv_input, {
+                      color: "#8076a3",
+                      prefixIcon: "lock",
+                      modelValue: vue.unref(anewPwd),
+                      "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => vue.isRef(anewPwd) ? anewPwd.value = $event : null),
+                      placeholder: "请输再次入密码",
+                      border: "none",
+                      clearable: "",
+                      password: "",
+                      fontSize: "20px"
+                    }, null, 8, ["modelValue"])
+                  ]),
+                  _: 1
+                  /* STABLE */
+                }),
                 vue.createVNode(_component_uv_button, {
                   color: "#131124",
                   text: "登录",
                   customStyle: "margin-top: 10px",
                   onClick: submit
-                })
+                }),
+                vue.createVNode(_component_uv_transition, {
+                  show: show.value,
+                  "custom-style": { "width": "100px", "height": "100px", "backgroundColor": "#3c9cff" },
+                  onChange: _ctx.change
+                }, null, 8, ["show", "onChange"])
               ]),
               _: 1
               /* STABLE */
-            }, 8, ["model", "rules"]),
+            }, 8, ["model"]),
             vue.createElementVNode("view", {
               class: "register",
               style: { "margin-top": "30rpx" }

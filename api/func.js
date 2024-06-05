@@ -1,23 +1,31 @@
-const Url = "http://192.168.31.193:8081"
+//==========================用户表接口============================
 //用户登录接口
-export const Login = Url+'/loginUser'
+export const Login = '/loginUser'
 
 //用户注册接口
-export const Register = Url+'/registerUser'
+export const Register = '/registerUser'
+
+//更新用户的学习时间
+export const UpdateUserLearnDat = '/updateUserLearnDate'
+
+//查询用户的学习时间
+export const GetUserLearnDate = '/getUserLearnDate'
+
+//============================================================
 
 //检查用户是否登录接口
 // export const  checkLogin = '/checkLogin'
 
 
 //用户登出接口
-export const Logout = Url+'/logoutUser'
+export const Logout = '/logoutUser'
 
 
 //列出用户所有日程
-export const ListSchedule = Url+'/findAllSchedule'
+export const ListSchedule = '/findAllSchedule'
 
 //添加日程接口
-export const AddSchedule = Url+'/addSchedule'
+export const AddSchedule = '/addSchedule'
 
 //删除日程接口
 export const DeleteSchedule = '/deleteSchedule'
@@ -47,3 +55,4 @@ export const AddCountDown = '/addCountDown'
 
 //删除倒计时
 export const DeleteCountDown = '/deleteCountDown'
+
