@@ -1,7 +1,7 @@
 <template>
 	<view>
     <view>
-      <uv-navbar leftText="返回" :fixed="false" title="个人中心" :safeAreaInsetTop="true" @leftClick="back">
+      <uv-navbar leftText="返回" :fixed="false" :safeAreaInsetTop="true" @leftClick="back">
         <template v-slot:left>
           <view class="uv-nav-slot">
             <uv-icon name="arrow-left" size="19"></uv-icon>

@@ -855,7 +855,29 @@ uni-view[data-v-ae8e42c7], uni-scroll-view[data-v-ae8e42c7], uni-swiper-item[dat
   border-width: 0.5px !important;
 }
 
-.loginFrom[data-v-e4e4508d]{
-	margin-top: 40px;
+.login-container[data-v-e4e4508d] {
+  padding: 1.25rem;
+  margin-top: 4.6875rem;
+}
+.title[data-v-e4e4508d] {
+
+  margin-bottom: 1.25rem;
+}
+.login-form[data-v-e4e4508d] {
+  margin-top: 1.25rem;
+}
+.register-link[data-v-e4e4508d] {
+  text-align: center;
+  margin-top: 0.9375rem;
 }
 
+/* 动画样式 */
+.slide-enter-active[data-v-e4e4508d],
+.slide-leave-active[data-v-e4e4508d] {
+  transition: all 0.3s;
+}
+.slide-enter[data-v-e4e4508d],
+.slide-leave-to[data-v-e4e4508d] {
+  transform: translateY(10px);
+  opacity: 0;
+}

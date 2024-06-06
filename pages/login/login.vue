@@ -58,9 +58,6 @@ const formRef = ref(null);
 
 const submit = async () => {
   const res = await login(user.name, user.pwd);
-  if (!res) {
-    uni.showToast({ title: '用户名或密码错误', icon: 'none' });
-  }
 };
 
 const toRegister = () => {

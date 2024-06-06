@@ -20,7 +20,7 @@ export const GetUserLearnDate = '/getUserLearnDate'
 //用户登出接口
 export const Logout = '/logoutUser'
 
-
+//========================日程===========================================
 //列出用户所有日程
 export const ListSchedule = '/findAllSchedule'
 
@@ -29,6 +29,11 @@ export const AddSchedule = '/addSchedule'
 
 //删除日程接口
 export const DeleteSchedule = '/deleteSchedule'
+
+//查询用户日程（模糊）
+export const SearchSchedule = '/fuzzySchedule'
+
+//=================================================================
 
 //获取当前用户登录的id
 export const GetUserId = '/getLoginUser'

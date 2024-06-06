@@ -11,7 +11,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app",
+				"navigationBarTitleText": "vue",
 				"navigationStyle": "custom"
 			}
 		},
@@ -37,10 +37,19 @@
 			{
 				"navigationBarTitleText" : "",
 				"navigationStyle": "custom"
+
 			}
 		},
 		{
 			"path" : "pages/schedulePage/schedulePage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/addSchedulePage/addSchedulePage",
 			"style" : 
 			{
 				"navigationBarTitleText" : "",

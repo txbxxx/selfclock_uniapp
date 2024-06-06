@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uv-navbar title="个人中心" bg-color="#ad6598" @leftClick="leftClick"></uv-navbar>
+    <uv-navbar title="主页" bg-color="#ad6598" @leftClick="leftClick" height="60rpx"></uv-navbar>
     <view class="ziPage">
       <view v-if="topath === 'indexPage'">
         <IndexPage />
