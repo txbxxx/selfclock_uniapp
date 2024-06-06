@@ -34,3 +34,15 @@ export function addSchedule(scheduleFiled,date,starTime,endTime,endDate){
         }
     })
 }
+
+//删除日程
+export function deleteSchedule(scheduleFiled,date){
+    return request({
+        url: api.Demo.DeleteSchedule,
+        method: 'delete',
+        data: {
+            scheduleFiled: scheduleFiled,
+            date:date
+        }
+    })
+}

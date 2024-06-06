@@ -5,5 +5,5 @@ export { Login, Register } from './login'
 export { updateLearnTime, getLearnTime } from './learndate'
 
 //日程
-export { listSchedule,searchSchedule,addSchedule } from './schedule'
+export { listSchedule,searchSchedule,addSchedule,deleteSchedule } from './schedule'
 

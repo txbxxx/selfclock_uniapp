@@ -1,29 +1,43 @@
 <template>
-  <view class="container">
-    <view>
-      <view class="title">
-        <text class="title-text" style="color: #7e1671;">您已经学习了:{{ learnDate }}分钟</text>
+  <view>
+    <view class="navbar-container">
+      <uni-nav-bar
+          border="false"
+          shadow="false"
+          fixed
+          height="60rpx"
+          title="不学习就无法生存"
+          background-color="#813c85"
+          color="#e2e1e4"
+      >
+      </uni-nav-bar>
+    </view>
+    <view class="container">
+      <view>
+        <view class="title">
+          <text class="title-text" style="color: #7e1671;">您已经学习了:{{ learnDate }}分钟</text>
+        </view>
       </view>
-    </view>
-    <view class="countdown">
-      {{ displayMinutes }}:{{ displaySeconds < 10 ? '0' + displaySeconds : displaySeconds }}
-    </view>
+      <view class="countdown">
+        {{ displayMinutes }}:{{ displaySeconds < 10 ? '0' + displaySeconds : displaySeconds }}
+      </view>
 
-    <view class="controls">
-      <view>
-        <uni-number-box
-            :value="countdownMinutesInput"
-            @change="updateCountdownMinutes"
-            color="#7e1671"
-            :min="0"
-            :max="60"
-            :step="1"
-        />
-      </view>
-      <view>
-        <button style="color: #894276; background-color: #d1c2d3; text-align: center;" @click="startCountdown">
-          开始学习之旅！
-        </button>
+      <view class="controls">
+        <view>
+          <uni-number-box
+              :value="countdownMinutesInput"
+              @change="updateCountdownMinutes"
+              color="#7e1671"
+              :min="0"
+              :max="60"
+              :step="1"
+          />
+        </view>
+        <view>
+          <button style="color: #894276; background-color: #d1c2d3; text-align: center;" @click="startCountdown">
+            开始学习之旅！
+          </button>
+        </view>
       </view>
     </view>
   </view>
@@ -54,7 +68,12 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss">
+.navbar-container {
+  position: relative;
+  z-index: 10;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -84,8 +103,9 @@ onMounted(() => {
 }
 
 .countdown {
-  font-size: 48px;
+  font-size: 200rpx;
   font-weight: bold;
+  margin-top: 30rpx;
   color: #7e1671;
 }
 

@@ -15916,9 +15916,10 @@ if (uni.restoreGlobal) {
         valiForm.value.validate().then((res) => {
           UserSchedule_add(filed.value, date3.value, starTime.value, endTime.value, endDate.value).then((res2) => {
             formatAppLog("log", "at pages/addSchedulePage/addSchedulePage.vue:84", res2);
+            back();
           });
         }).catch((err) => {
-          formatAppLog("log", "at pages/addSchedulePage/addSchedulePage.vue:87", "err", err);
+          formatAppLog("log", "at pages/addSchedulePage/addSchedulePage.vue:88", "err", err);
         });
       };
       return (_ctx, _cache) => {

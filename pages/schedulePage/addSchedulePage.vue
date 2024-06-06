@@ -1,7 +1,19 @@
 <template>
   <view>
-    <uv-navbar leftText="返回" :fixed="false" title="添加日程" :safeAreaInsetTop="true" @leftClick="back"></uv-navbar>
-    <view class="container">
+    <view class="navbar-container">
+      <uni-nav-bar
+          border="false"
+          shadow="false"
+          left-text="返回"
+          fixed
+          height="60rpx"
+          title="计划未来"
+          background-color="#813c85"
+          color="#e2e1e4"
+          @clickLeft="back"
+      ></uni-nav-bar>
+    </view>
+    <view class="containerSchedule">
       <uni-section title="添加日程" type="line">
         <view class="example">
           <!-- 基础表单校验 -->
@@ -23,24 +35,27 @@
 </template>
 
 <script setup>
-import { ref, reactive, toRefs } from 'vue';
-import { UserSchedule_add } from "../../hook";
+import {ref, reactive, toRefs,inject } from 'vue';
+import {UserSchedule_add} from '../../hook';
 
 // 初始化表单数据
 const valiFormData = reactive({
   filed: '',
   date: '',
-  endDate:'',
+  endDate: '',
   starTime: '',
   endTime: ''
 });
 
 // 使用 toRefs 解包
-const { filed, date, starTime, endTime,endDate } = toRefs(valiFormData);
+const {filed, date, starTime, endTime, endDate} = toRefs(valiFormData);
+
 
 // 返回上一页
 const back = () => {
-  uni.navigateBack();
+  uni.redirectTo({
+    url: '/pages/index/index'
+  });
 };
 
 // 处理日期时间变化
@@ -79,9 +94,12 @@ const valiForm = ref(null);
 
 // 提交表单
 const submit = () => {
+  // 校验表单
   valiForm.value.validate().then((res) => {
-    UserSchedule_add(filed.value,date.value,starTime.value,endTime.value,endDate.value).then((res) => {
-      console.log(res)
+    // 校验成功后提交表单
+    UserSchedule_add(filed.value, date.value, starTime.value, endTime.value, endDate.value).then(()=>{
+      // 回退到上级
+      back()
     })
   }).catch((err) => {
     console.log('err', err);

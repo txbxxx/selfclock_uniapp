@@ -49,7 +49,15 @@
 			}
 		},
 		{
-			"path" : "pages/addSchedulePage/addSchedulePage",
+			"path" : "pages/schedulePage/addSchedulePage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/schedulePage/listSchedule",
 			"style" : 
 			{
 				"navigationBarTitleText" : "",

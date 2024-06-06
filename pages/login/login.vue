@@ -80,10 +80,7 @@ const toRegister = () => {
   padding: 40rpx;
   margin-top: 150rpx;
 }
-.title {
 
-  margin-bottom: 40rpx;
-}
 .login-form {
   margin-top: 40rpx;
 }

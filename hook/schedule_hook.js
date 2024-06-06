@@ -1,4 +1,4 @@
-import { listSchedule,searchSchedule,addSchedule } from "../service/index";
+import { listSchedule,searchSchedule,addSchedule,deleteSchedule } from "../service/index";
 
 
 //列出用户所有日程
@@ -73,5 +73,25 @@ export async function UserSchedule_add(scheduleFiled,date,starTime,endTime,endDa
             duration: 2000
         })
     })
+}
 
+
+//删除日程
+export async function UserSchedule_delete(scheduleFiled,date){
+    // 删除日程
+    const res =  await deleteSchedule(scheduleFiled,date)
+    if (res.code === 200 ){
+        uni.showToast({
+            title: "删除成功",
+            icon: "none",
+            duration: 2000
+        })
+        return true
+    }else{
+        uni.showToast({
+            title: "删除失败！！",
+            icon: "none",
+            duration: 2000
+        })
+    }
 }

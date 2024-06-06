@@ -1,6 +1,6 @@
 <template>
   <view>
-    <uv-navbar title="主页" bg-color="#ad6598" @leftClick="leftClick" height="60rpx"></uv-navbar>
+
     <view class="ziPage">
       <view v-if="topath === 'indexPage'">
         <IndexPage />
@@ -51,27 +51,16 @@ const topath = ref('indexPage');
 const changeButton = (index) => {
   value.value = index;
   topath.value = DataTabbars.value[index].path;
-  console.log(topath.value);
 };
 
 const navigateTo = (index, path) => {
   value.value = index;
   topath.value = path;
-  console.log(topath.value);
 };
 
-const rightClick = () => {
-  console.log('rightClick');
-};
-
-const leftClick = () => {
-  console.log('leftClick');
-};
 </script>
 
 <style>
-.ziPage{
-  margin-top: 100rpx;
-}
+
 
 </style>
