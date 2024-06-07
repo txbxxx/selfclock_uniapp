@@ -43,6 +43,7 @@ export function updateTask(taskFiled,taskname,tasklevel) {
         data: {
             taskname: taskname,
             taskstr: taskFiled,
+            tasklevel: tasklevel,
         }
     })
 }
