@@ -101,13 +101,12 @@ const submit = () => {
     // 校验成功后提交表单
     UserSchedule_add(filed.value, date.value, starTime.value, endTime.value, endDate.value).then(()=>{
       // 回退到上级
-      back()
+    back()
     })
   }).catch((err) => {
     console.log('err', err);
   });
 };
-
 </script>
 
 <style lang="scss">

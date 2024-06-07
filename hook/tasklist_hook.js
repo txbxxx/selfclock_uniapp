@@ -18,7 +18,7 @@ export async function UserTask_list()
 }
 
 //添加任务
-export async function UserTask_add(taskFiledtaskFiled,taskname,tasklevel)
+export async function UserTask_add(taskFiled,taskname,tasklevel)
 {
     let res = await addTask(taskFiled,taskname,tasklevel);
     if(res.code === 200)

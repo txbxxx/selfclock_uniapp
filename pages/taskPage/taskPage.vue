@@ -13,8 +13,9 @@
     </uni-nav-bar>
     <uni-section class="mb-10" title="任务列表" type="line">
       <template v-slot:right>
-        <uv-icon name="plus-circle" color="#983680" size="24" @click="addTask" ></uv-icon>
+        <uv-icon name="plus-circle" color="#983680" size="24" @click="addTask"></uv-icon>
       </template>
+
       <view v-for="(task, index) in tasks" :key="index">
         <uv-list :border="true">
           <uv-list-item :title="task.taskName" :note="task.taskField" ellipsis="8">
@@ -24,8 +25,8 @@
               </view>
             </template>
             <template v-slot:footer>
-              <uv-icon name="edit-pen" color="#983680" size="24" @click="" ></uv-icon>
-              <uv-icon name="trash" color="#983680" size="24" @click=""  ></uv-icon>
+              <uv-icon name="edit-pen" color="#983680" size="24" @click=""></uv-icon>
+              <uv-icon name="trash" color="#983680" size="24" @click=""></uv-icon>
               <view class="slot-box">
                 <uni-data-checkbox
                     :multiple="true"
@@ -40,6 +41,42 @@
         </uv-list>
       </view>
     </uni-section>
+    <!-- 弹出层 -->
+    <uni-popup ref="popup" type="dialog" borderRadius="20rpx 20rpx 20rpx 20rpx">
+      <view class="popup-content">
+        <uni-section title="添加任务" type="line">
+          <view class="form-container">
+            <!-- 基础表单校验 -->
+            <uni-forms ref="valiForm" :rules="rules" :modelValue="addFiled">
+              <uni-forms-item required name="taskName">
+                <uni-easyinput v-model="addFiled.taskName" placeholder="请输入你即将要完成的任务名" clearable />
+              </uni-forms-item>
+              <uni-forms-item required name="taskFiled">
+                <uni-easyinput v-model="addFiled.taskFiled" placeholder="那么他有些什么内容呢？" type="textarea" autoHeight clearable />
+              </uni-forms-item>
+              <uni-forms-item name="level">
+                <uni-data-select
+                    v-model="addFiled.taskLevel"
+                    label="选择任务等级"
+                    :localdata="range"
+                    @change="level($event)"
+                >
+                  <template v-slot:right>
+                    <view class="slot-box">
+                      <uni-icons type="flag" size="16" color="#7e1671" />
+                    </view>
+                  </template>
+                </uni-data-select>
+              </uni-forms-item>
+            </uni-forms>
+            <view class="button-group">
+              <button type="default" size="mini" @click="closePopup">取消</button>
+              <button type="primary" size="mini" @click="submit">提交</button>
+            </view>
+          </view>
+        </uni-section>
+      </view>
+    </uni-popup>
   </view>
 </template>
 
@@ -47,91 +84,198 @@
 
 
 <script setup>
-import { ref ,onMounted} from 'vue'
-import {UserTask_list} from "../../hook";
+import { ref, onMounted, reactive, toRefs } from 'vue'
+import { UserTask_list, UserTask_add } from '../../hook';
 
 onMounted(() => {
   getTaskList()
 })
 
-//
 const value = ref(0)
 
-
-//任务列表
-const tasks = ref()
+// 任务列表
+const tasks = ref([])
 
 // 获取任务列表
 const getTaskList = () => {
   UserTask_list().then(res => {
-    // 假设返回的任务列表中每个任务对象都有 taskName 属性
     tasks.value = res.map(task => ({
       taskName: task.taskName,
       taskField: task.taskField,
-      completed: false,// 初始状态都设置为未完成
+      completed: false, // 初始状态都设置为未完成
       color: getColorByLevel(task.taskLevel) // 根据任务等级设置颜色
     }))
-    console.log(tasks.value.color)
   })
 }
+
 // 根据任务等级返回对应的颜色
 const getColorByLevel = (level) => {
-  console.log(level)
   switch (level) {
-    case 1:
-      return '#12a182'; // 绿色
-    case 2:
-      return '#d2b42c'; // 黄色
-    case 3:
-      return '#fba414'; // 橙色
     case 4:
+      return '#12a182'; // 绿色
+    case 3:
+      return '#d2b42c'; // 黄色
+    case 2:
+      return '#fba414'; // 橙色
+    case 1:
       return '#ef82a0'; // 红色
     default:
       return '#CCCCCC'; // 默认灰色
   }
 }
 
-//添加任务
+// ===============添加任务=======================
+// 弹出层
+const popup = ref(null);
+
 const addTask = () => {
-  uni.navigateTo({
-    url: '/pages/task/addTask'
-  })
+  popup.value.open();
 }
 
+const closePopup = () => {
+  popup.value.close();
+}
+
+// 接受输入的值
+const addFiled = reactive({
+  taskFiled: '',
+  taskName: '',
+  taskLevel: '',
+})
+
+const { taskFiled, taskName, taskLevel } = toRefs(addFiled)
+
+// 任务等级
+const range = [
+  {
+    text: '重要且紧急',
+    value: 1
+  },
+  {
+    text: '重要不紧急',
+    value: 2
+  },
+  {
+    text: '紧急不重要',
+    value: 3
+  },
+  {
+    text: '不重要不紧急',
+    value: 4
+  }
+]
+
+// 校验规则
+const rules = {
+  taskFiled: {
+    rules: [
+      {
+        required: true,
+        errorMessage: "请填写内容"
+      }
+    ]
+  },
+  taskName: {
+    rules: [
+      {
+        required: true,
+        errorMessage: "请填写任务名"
+      }
+    ]
+  }
+};
+
+// 表单引用
+const valiForm = ref(null);
+
+// 提交表单
+const submit = () => {
+  if (valiForm.value) {
+    // 校验表单
+    valiForm.value.validate().then(() => {
+      // 校验成功后提交表单
+      UserTask_add(taskFiled.value, taskName.value, taskLevel.value).then(() => {
+        // 刷新任务列表
+        getTaskList();
+        // 关闭弹出层
+        closePopup();
+      })
+    }).catch((err) => {
+      console.log('err', err);
+    });
+  }
+};
+
+//任务等级
+const level = (e) => {
+  addFiled.taskLevel = e
+}
 </script>
+
 
 
 
 <style lang="scss">
 .slot-box {
-  /* #ifndef APP-NVUE */
   display: flex;
-  /* #endif */
   flex-direction: row;
   align-items: center;
 }
-.slot-text-header{
-  flex:0.1;
+
+.slot-text-header {
+  flex: 0.1;
   font-size: 19px;
 }
 
-
-.uni-tag--default[data-v-1f94d070]{
+.uni-tag--default {
   color: #5c2223;
   font-size: 15px;
 }
 
-.uni-data-checklist .checklist-group .checklist-box .checkbox__inner[data-v-2f788efd]{
+.uni-data-checklist .checklist-group .checklist-box .checkbox__inner {
   border: 2px solid #2c2c2c;
   height: 50rpx;
   width: 50rpx;
   margin-left: 40rpx;
 }
 
-/*标题的line颜色*/
-.uni-section .uni-section-header__decoration[data-v-637fd36b]{
+/* 标题的 line 颜色 */
+.uni-section .uni-section-header__decoration {
   background-color: #7e1671;
 }
+
+/* 弹出层 */
+.popup-content {
+  height: 900rpx;
+  width: 700rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.form-container {
+  padding: 20rpx;
+  background-color: #f7f7f7;
+  border-radius: 10rpx;
+}
+
+.uni-forms-item {
+  margin-bottom: 20rpx;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+button {
+  flex: 1;
+  margin: 0 10rpx;
+}
+
 </style>
+
+
 
 
