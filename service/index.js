@@ -8,5 +8,5 @@ export { updateLearnTime, getLearnTime } from './learndate'
 export { listSchedule,searchSchedule,addSchedule,deleteSchedule } from './schedule'
 
 //任务
-export {listTask,addTask,deleteTask,updateTask} from './tasklist'
+export {listTask,addTask,deleteTask,updateTask,updateTaskStatus} from './tasklist'
 

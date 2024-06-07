@@ -1,4 +1,4 @@
-import {listTask,addTask,deleteTask,updateTask} from "../service/index";
+import {listTask,addTask,deleteTask,updateTask,updateTaskStatus} from "../service/index";
 
 //列出所有任务
 export async function UserTask_list()
@@ -66,6 +66,26 @@ export async function UserTask_update(taskFiled,taskname,tasklevel)
     {
         uni.showToast({
             title: '更新成功',
+            icon: 'none',
+            duration: 2000
+        });
+    }else {
+        uni.showToast({
+            title: res.data,
+            icon: 'none',
+            duration: 2000
+        });
+    }
+}
+
+//更新用户状态
+export async function UserTask_updateStatus(taskFiled,taskname,tasklevel)
+{
+    let res = await updateTaskStatus(taskFiled,taskname,tasklevel);
+    if(res.code === 200)
+    {
+        uni.showToast({
+            title: '任务完成啦，你又变厉害了！',
             icon: 'none',
             duration: 2000
         });

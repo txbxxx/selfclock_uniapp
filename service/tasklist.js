@@ -47,3 +47,15 @@ export function updateTask(taskFiled,taskname,tasklevel) {
         }
     })
 }
+
+//更新任务状态
+export function updateTaskStatus(taskname,taskstatus) {
+    return request({
+        url: api.Demo.UpdateTaskStatus,
+        method: 'put',
+        data: {
+            taskname: taskname,
+            taskstatus: taskstatus,
+        }
+    })
+}

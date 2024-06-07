@@ -234,34 +234,34 @@ const deleteS = async (s, e) => {
 }
 
 .uni-calendar-item--isDay[data-v-65626c58] {
-  background-color: #7e1671;
+  background-color: #7e1671 !important;
 }
 
 .uni-calendar__header-text[data-v-b6ab2cfb] {
-  color: #7e1671;
+  color: #7e1671 !important;
 }
 
 .uni-calendar__header-btn[data-v-b6ab2cfb] {
-  border-left-color: #7e1671;
-  border-top-color: #7e1671;
+  border-left-color: #7e1671 !important;
+  border-top-color: #7e1671 !important;
 }
 
 .uni-calendar__backtoday[data-v-b6ab2cfb] {
-  color: #7e1671;
+  color: #7e1671 !important;
 }
 
 .uni-calendar__weeks-day-text[data-v-b6ab2cfb] {
-  color: #7e1671;
+  color: #7e1671 !important;
   font-weight: bold;
 }
 
 .uni-calendar-item--isDay-text[data-v-65626c58] {
-  color: #c8adc4;
+  color: #c8adc4 !important;
 }
 
 .uni-calendar-item--checked[data-v-65626c58] {
   border: 30px;
-  background-color: #8b2671;
+  background-color: #8b2671 !important;
 }
 
 /* 日程表样式 */
