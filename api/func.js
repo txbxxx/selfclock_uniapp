@@ -54,6 +54,10 @@ export const DeleteTask = '/deleteUserTask'
 //更新任务状态
 export const UpdateTaskStatus = '/updateTaskStatus'
 
+//搜索任务
+export const SearchTask = '/searchTask'
+
+
 //列出用户未完成的倒计时
 export const ListCountDownOverFalse = '/listCountDownOverFalse'
 

@@ -36,7 +36,7 @@ export function deleteTask(taskname) {
 }
 
 //更新任务
-export function updateTask(taskFiled,taskname,tasklevel) {
+export function updateTask(taskFiled,taskname,tasklevel,oldtaskname) {
     return request({
         url: api.Demo.UpdateTask,
         method: 'put',
@@ -44,6 +44,7 @@ export function updateTask(taskFiled,taskname,tasklevel) {
             taskname: taskname,
             taskstr: taskFiled,
             tasklevel: tasklevel,
+            oldtaskname: oldtaskname,
         }
     })
 }
@@ -56,6 +57,18 @@ export function updateTaskStatus(taskname,taskstatus) {
         data: {
             taskname: taskname,
             taskstatus: taskstatus,
+        }
+    })
+}
+
+//查询任务
+export function searchTask(taskName,taskFiled) {
+    return request({
+        url: api.Demo.SearchTask,
+        method: 'get',
+        data: {
+            taskstr: taskFiled,
+            taskName: taskName
         }
     })
 }

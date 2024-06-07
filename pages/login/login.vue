@@ -1,6 +1,6 @@
 <template>
   <view class="login-container">
-    <uv-text class="title" size="50px" align="center" bold="true" color="#7e1671" text="登录"></uv-text>
+    <uv-text class="title" size="50px" align="center" :bold="true" color="#7e1671" text="登 录"></uv-text>
     <div class="login-form">
       <uv-form
           labelPosition="left"
@@ -29,7 +29,7 @@
               password
               fontSize="20px"/>
         </uv-form-item>
-        <uv-button color="#322f3b" text="登 录" customStyle="margin-top: 10px" @click="submit"/>
+        <uv-button color="#322f3b" text="登 录" customStyle="margin-top: 10px" style="height: 100rpx;" @click="submit"/>
       </uv-form>
       <transition name="slide">
         <view v-if="showRegisterTip" class="register-link" @click="toRegister">
