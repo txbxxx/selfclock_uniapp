@@ -15103,6 +15103,11 @@ ${i3}
             return "#CCCCCC";
         }
       };
+      const addTask = () => {
+        uni.navigateTo({
+          url: "/pages/task/addTask"
+        });
+      };
       return (_ctx, _cache) => {
         const _component_uni_nav_bar = resolveEasycom(vue.resolveDynamicComponent("uni-nav-bar"), __easycom_0$3);
         const _component_uv_icon = resolveEasycom(vue.resolveDynamicComponent("uv-icon"), __easycom_0$7);
@@ -15132,8 +15137,8 @@ ${i3}
                 name: "plus-circle",
                 color: "#983680",
                 size: "24",
-                onClick: _ctx.addTask
-              }, null, 8, ["onClick"])
+                onClick: addTask
+              })
             ]),
             default: vue.withCtx(() => [
               (vue.openBlock(true), vue.createElementBlock(
