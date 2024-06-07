@@ -5,6 +5,7 @@
           border="false"
           shadow="false"
           fixed
+          style="margin-top: 40rpx"
           height="60rpx"
           title="不学习就无法生存"
           background-color="#813c85"

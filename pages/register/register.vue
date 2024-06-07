@@ -54,20 +54,20 @@ const {name,pwd,anewPwd} = toRefs(User)
 //动画
 const show = ref(false)
 
-const rulesFrom = {
-  name: [
-    { required: true, message: '请输入用户名', trigger: 'submit' },
-    { min: 3, max: 5, message: '长度在 3 到 6 个字符', trigger: 'submit' }
-  ],
-  pwd: [
-    { required: true, message: '请输入密码', trigger: 'submit' },
-    { min: 3, max: 5, message: '长度在 3 到 6 个字符', trigger: 'submit' }
-  ],
-  anewPwd: [
-    { required: true, message: '请再次输入密码', trigger: 'submit' },
-    { min: 3, max: 5, message: '长度在 3 到 6 个字符', trigger: 'submit' }
-  ]
-}
+// const rulesFrom = {
+//   name: [
+//     { required: true, message: '请输入用户名', trigger: 'submit' },
+//     { min: 3, max: 5, message: '长度在 3 到 6 个字符', trigger: 'submit' }
+//   ],
+//   pwd: [
+//     { required: true, message: '请输入密码', trigger: 'submit' },
+//     { min: 3, max: 5, message: '长度在 3 到 6 个字符', trigger: 'submit' }
+//   ],
+//   anewPwd: [
+//     { required: true, message: '请再次输入密码', trigger: 'submit' },
+//     { min: 3, max: 5, message: '长度在 3 到 6 个字符', trigger: 'submit' }
+//   ]
+// }
 
 
 

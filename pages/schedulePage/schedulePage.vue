@@ -7,9 +7,9 @@
           fixed
           height="60rpx"
           title="诗和远方"
+          style="margin-top: 40rpx"
           background-color="#813c85"
           color="#e2e1e4"
-          @clickLeft="back"
       ></uni-nav-bar>
     </view>
     <!-- 搜索组件 -->
@@ -225,7 +225,7 @@ const deleteS = async (s, e) => {
 }
 
 .uni-searchbar__cancel[data-v-f07ef577] {
-  color: #7e1671;
+  color: #7e1671 !important;
 }
 
 /* 日历组件样式 */

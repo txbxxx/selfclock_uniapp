@@ -7,7 +7,7 @@
       </view>
 
       <view v-if="topath === 'task'">
-        <!-- Task Page Component can go here -->
+        <TaskPage />
       </view>
 
       <view v-if="topath === 'calendar'">
@@ -17,7 +17,8 @@
     <uv-tabbar
         :value="value"
         :border="false"
-        :fixed="true"
+        :statusBar="true"
+        style="margin-top: 40rpx"
         @change="changeButton"
         activeColor="#7e1671"
     >
@@ -37,6 +38,7 @@
 <script setup>
 import IndexPage from "../indexPage/indexPage.vue";
 import SchedulePage from "../schedulePage/schedulePage.vue";
+import TaskPage from "../taskPage/taskPage.vue";
 import { ref } from 'vue';
 
 const DataTabbars = ref([

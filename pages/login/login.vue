@@ -50,10 +50,6 @@ const user = reactive({ name: '', pwd: '' });
 const showRegisterTip = ref(true);
 
 
-const rules = {
-  name: { type: 'string', required: true, message: '请填写姓名', trigger: ['blur', 'change'] },
-  pwd: { type: 'string', required: true, message: '请填写密码', trigger: ['blur', 'change'] },
-};
 const formRef = ref(null);
 
 const submit = async () => {

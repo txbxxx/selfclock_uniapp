@@ -7,6 +7,7 @@
           left-text="返回"
           fixed
           height="60rpx"
+          style="margin-top: 40rpx"
           title="这些都是你的诗和远方吗"
           background-color="#813c85"
           color="#e2e1e4"

@@ -28,11 +28,11 @@ uni.addInterceptor('request', {
         console.log(request.url)
         // 如果请求的URL是登录页面，则直接返回请求配置，不进行拦截处理
         if (request.url === '/loginUser' || request.url==='/registerUser') {
-            request.url = "http://localhost:8081" + request.url;
+            request.url = "http://192.168.31.193:8081" + request.url;
             return request;
         }
         // 在发送请求之前做些什么
-        request.url = "http://localhost:8081" + request.url;
+        request.url = "http://192.168.31.193:8081" + request.url;
 
 
         // 在这里可以对请求参数进行修改等操作

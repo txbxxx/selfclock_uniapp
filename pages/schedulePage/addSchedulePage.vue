@@ -7,12 +7,14 @@
           left-text="返回"
           fixed
           height="60rpx"
-          title="计划未来"
+          style="margin-top: 40rpx"
+          title="是要去看世界吗？"
           background-color="#813c85"
           color="#e2e1e4"
           @clickLeft="back"
       ></uni-nav-bar>
     </view>
+
     <view class="containerSchedule">
       <uni-section title="添加日程" type="line">
         <view class="example">
