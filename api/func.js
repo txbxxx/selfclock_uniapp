@@ -67,3 +67,6 @@ export const AddCountDown = '/addCountDown'
 //删除倒计时
 export const DeleteCountDown = '/deleteCountDown'
 
+//更新倒计时
+export const UpdateCountDownPastDay = '/updateCountDownPastDay'
+

@@ -1,4 +1,4 @@
-import {listCountdownCard,addCountdownCard,deleteCountdownCard} from "../service/index";
+import {listCountdownCard,addCountdownCard,deleteCountdownCard,updateCountdownCard} from "../service/index";
 
 //列出所有未完成的倒计时
 export async function UserCountdown_list()
@@ -49,6 +49,25 @@ export async function UserCountdown_delete(countdownName)
       uni.showToast({
           icon: 'none',
           title: "删除倒计时失败",
+          duration: 2000
+      });
+  }
+}
+
+//更新倒计时日期
+export async function UserCountdown_update()
+{
+  let res = await updateCountdownCard();
+  if (res.code === 200){
+      uni.showToast({
+          icon: 'none',
+          title: "更新倒计时成功",
+          duration: 2000
+      });
+  }else{
+      uni.showToast({
+          icon: 'none',
+          title: "更新倒计时失败",
           duration: 2000
       });
   }

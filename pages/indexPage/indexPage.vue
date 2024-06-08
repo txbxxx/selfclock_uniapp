@@ -50,13 +50,12 @@
         <uni-card >
           <template v-slot:title>
             <view>
-              <text>{{item.countdownName}}</text>
+              <text  class="styled-text">{{item.countdownName}}</text>
               <uni-icons type="minus" size="15" style="float: right" @click="deleteCountdown(item.countdownName)"></uni-icons>
             </view>
           </template>
-          <text>剩余时间: {{item.countdownDay}} 天</text>
+          <text>剩余时间: {{item.countdownDay - item.countdownPast}} 天</text>
         </uni-card>
-
       </view>
 
     </uni-section>
@@ -64,7 +63,7 @@
     <!--倒计时弹窗-->
     <uni-popup ref="popupAddCountDown" type="dialog" borderRadius="20rpx 20rpx 20rpx 20rpx">
       <view class="popupCountDown">
-        <uni-section title="添加任务" type="line">
+        <uni-section title="添加倒计时" type="line">
           <view class="form-container">
             <!-- 基础表单校验 -->
             <uni-forms ref="valiForm" rules="" :modelValue="addCountDownData">
@@ -88,7 +87,7 @@
 
 <script setup>
 import { inject, ref, onMounted } from 'vue';
-import {getUserLearnData, UserCountdown_add, UserCountdown_delete, UserCountdown_list} from "../../hook";
+import {getUserLearnData, UserCountdown_add, UserCountdown_delete, UserCountdown_list,UserCountdown_update} from "../../hook";
 
 const countdownMinutesInput = inject('countdownMinutesInput');
 const displayMinutes = inject('displayMinutes');
@@ -109,6 +108,7 @@ onMounted(() => {
     learnDate.value = res;
   });
   listCountdownCard()
+  updateCountdownStatus()
 });
 //===========倒计时=========================
 //接收倒计时参数
@@ -153,6 +153,14 @@ const submit = () => {
 //删除倒计时
 const deleteCountdown = (countdownName) => {
   UserCountdown_delete(countdownName).then(res => {
+    listCountdownCard();
+  })
+}
+
+
+//更新倒计时状态
+const updateCountdownStatus = () => {
+  UserCountdown_update().then(res => {
     listCountdownCard();
   })
 }
@@ -207,6 +215,23 @@ const deleteCountdown = (countdownName) => {
   border-radius: 20rpx;
 }
 
+.uni-view[data-v-4a605131]{
+  background-color: #7e1671;
+}
+
+.uni-card .uni-card__content[data-v-ae4bee67]{
+  background-color: #8076a3;
+  color: #FFFFFF;
+}
+
+.styled-text {
+  background-color: #d1c2d3;
+  font-size: 30rpx;
+  border: 1px solid #ccc;
+  margin-bottom: 5rpx;
+  border-radius: 5px;
+  display: inline-block; /* 确保内联元素正确显示边框和填充 */
+}
 
 </style>
 

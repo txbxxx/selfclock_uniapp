@@ -35,3 +35,11 @@ export async function deleteCountdownCard(countdownName) {
   });
 }
 
+
+//更新倒计时
+export async function updateCountdownCard() {
+  return request({
+    url: api.Demo.UpdateCountDownPastDay,
+    method: "get",
+  });
+}

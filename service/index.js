@@ -11,5 +11,5 @@ export { listSchedule,searchSchedule,addSchedule,deleteSchedule } from './schedu
 export {listTask,addTask,deleteTask,updateTask,updateTaskStatus,searchTask} from './tasklist'
 
 //倒计时卡片
-export {listCountdownCard,addCountdownCard,deleteCountdownCard} from './countdowncard'
+export {listCountdownCard,addCountdownCard,deleteCountdownCard,updateCountdownCard} from './countdowncard'
 
