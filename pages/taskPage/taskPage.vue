@@ -18,7 +18,8 @@
           clearButton="auto"
           textColor="#7e1671"
           @confirm="search"
-      ></uni-search-bar>
+      >
+      </uni-search-bar>
     </view>
     <uni-section class="mb-10" title="任务列表" type="line">
       <template v-slot:right>
@@ -109,6 +110,36 @@
             </view>
           </view>
         </uni-section>
+      </view>
+    </uni-popup>
+
+    <!--搜索弹出层-->
+    <uni-popup ref="popupSearch" type="bottom" border-radius="10px 10px 0 0">
+      <!--搜索到的字段-->
+      <view v-for="(task, index) in searchValue" :key="index">
+        <uv-list :border="true">
+          <uv-list-item :title="task.taskName" :note="task.taskField" ellipsis="8"  :class="{'completed-task': task.isOver}" >
+            <template v-slot:header>
+              <view class="slot-box slot-text-header">
+                <uni-tag text=" " :circle="true" :style="{backgroundColor: task.color}"></uni-tag>
+              </view>
+            </template>
+            <template v-slot:footer>
+              <uv-icon name="edit-pen" color="#983680" size="24" @click="updateTask(searchValue.taskField,searchValue.taskName, searchValue.taskLevel)"></uv-icon>
+              <uv-icon name="trash" color="#983680" size="24" @click="deleteTask(searchValue.taskName)"></uv-icon>
+              <view class="slot-box">
+                <uni-data-checkbox
+                    class="checkbox-box"
+                    :multiple="true"
+                    :localdata="[{value: index,text: ''}]"
+                    :v-model="task.isOver"
+                    @change="checkData(index)"
+                    selectedColor="#7e1671"
+                />
+              </view>
+            </template>
+          </uv-list-item>
+        </uv-list>
       </view>
     </uni-popup>
   </view>

@@ -62,12 +62,12 @@ export function updateTaskStatus(taskname,taskstatus) {
 }
 
 //查询任务
-export function searchTask(taskName,taskFiled) {
+export function searchTask(taskFiled) {
     return request({
         url: api.Demo.SearchTask,
-        method: 'get',
+        method: 'post',
         data: {
-            taskstr: taskFiled,
+            taskfiled: taskFiled,
         }
     })
 }
