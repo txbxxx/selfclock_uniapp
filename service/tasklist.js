@@ -68,7 +68,6 @@ export function searchTask(taskName,taskFiled) {
         method: 'get',
         data: {
             taskstr: taskFiled,
-            taskName: taskName
         }
     })
 }

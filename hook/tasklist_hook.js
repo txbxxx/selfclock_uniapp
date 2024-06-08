@@ -100,9 +100,9 @@ export async function UserTask_updateStatus(taskname,taskstatus)
 }
 
 //查询用户
-export async function UserTask_search(taskName,taskFiled)
+export async function UserTask_search(taskFiled)
 {
-    let res = await searchTask(taskName,taskFiled);
+    let res = await searchTask(taskFiled);
     if(res.code === 200)
     {
         console.log(res.data)

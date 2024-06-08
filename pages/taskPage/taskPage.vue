@@ -119,7 +119,14 @@
 
 <script setup>
 import { ref, onMounted, reactive, toRefs } from 'vue'
-import {UserTask_list, UserTask_add, UserTask_delete, UserTask_update, UserTask_updateStatus} from '../../hook';
+import {
+  UserTask_list,
+  UserTask_add,
+  UserTask_delete,
+  UserTask_update,
+  UserTask_updateStatus,
+  UserTask_search
+} from '../../hook';
 
 //=============================获取任务================================
 onMounted(() => {
@@ -307,6 +314,26 @@ const checkData = (index) => {
   }
 
 }
+
+//================搜索=========================
+//搜索弹窗
+const popupSearch = ref(null);
+
+
+//接收搜索的变量
+const searchValue = ref([])
+// 搜索功能
+const search = async (e) => {
+  // 在这里处理搜索逻辑
+  try {
+    const res = await UserTask_search(e.value);
+    searchValue.value = res;
+    popupSearch.value.open();
+  } catch (error) {
+    console.error('搜索失败:', error);
+  }
+};
+
 
 </script>
 
