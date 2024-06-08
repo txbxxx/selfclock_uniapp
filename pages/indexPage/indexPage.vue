@@ -41,12 +41,54 @@
         </view>
       </view>
     </view>
+    <uni-section class="mb-10" title="倒计时卡片" sub-title="重要的日子就需要提醒你" type="line">
+      <template v-slot:right>
+        <uv-icon name="plus-circle" color="#983680" size="24" @click="addCountdown"></uv-icon>
+      </template>
+      <view v-for="(item, index) in countdownCardList" :key="index">
+
+        <uni-card >
+          <template v-slot:title>
+            <view>
+              <text>{{item.countdownName}}</text>
+              <uni-icons type="minus" size="15" style="float: right" @click="deleteCountdown(item.countdownName)"></uni-icons>
+            </view>
+          </template>
+          <text>剩余时间: {{item.countdownDay}} 天</text>
+        </uni-card>
+
+      </view>
+
+    </uni-section>
+
+    <!--倒计时弹窗-->
+    <uni-popup ref="popupAddCountDown" type="dialog" borderRadius="20rpx 20rpx 20rpx 20rpx">
+      <view class="popupCountDown">
+        <uni-section title="添加任务" type="line">
+          <view class="form-container">
+            <!-- 基础表单校验 -->
+            <uni-forms ref="valiForm" rules="" :modelValue="addCountDownData">
+              <uni-forms-item required name="taskName">
+                <uni-easyinput styles="width: 40rpx;" v-model="addCountDownData.countdownName" placeholder="有什么重要日子啦？" clearable />
+              </uni-forms-item>
+              <uni-forms-item required name="taskFiled">
+                <uni-easyinput v-model="addCountDownData.countdownDay" placeholder="还有多久呀？"   clearable />
+              </uni-forms-item>
+            </uni-forms>
+            <view class="button-group">
+              <button type="default" size="mini" @click="closePopupCountDown">取消</button>
+              <button type="primary" size="mini" @click="submit">提交</button>
+            </view>
+          </view>
+        </uni-section>
+      </view>
+    </uni-popup>
   </view>
 </template>
 
 <script setup>
 import { inject, ref, onMounted } from 'vue';
-import { getUserLearnData } from "../../hook";
+import {getUserLearnData, UserCountdown_add, UserCountdown_delete, UserCountdown_list} from "../../hook";
 
 const countdownMinutesInput = inject('countdownMinutesInput');
 const displayMinutes = inject('displayMinutes');
@@ -66,7 +108,54 @@ onMounted(() => {
   const userLearnData = getUserLearnData().then(res => {
     learnDate.value = res;
   });
+  listCountdownCard()
 });
+//===========倒计时=========================
+//接收倒计时参数
+const countdownCardList = ref([]);
+
+//获取所有未完成的倒计时
+const listCountdownCard = () => {
+  UserCountdown_list().then(res => {
+    countdownCardList.value = res;
+  })
+}
+
+//添加倒计时弹窗
+const popupAddCountDown = ref(null);
+
+//接收添加倒计时表单参数
+const addCountDownData =  ref(
+    {
+      countdownName: '',
+      countdownDay: '',
+    }
+)
+//添加倒计时弹窗
+const addCountdown = () => {
+  popupAddCountDown.value.open();
+}
+
+//关闭弹窗
+const closePopupCountDown = () => {
+  popupAddCountDown.value.close();
+}
+
+//添加倒计时
+const submit = () => {
+  UserCountdown_add(addCountDownData.value.countdownName,addCountDownData.value.countdownDay).then(res => {
+    listCountdownCard();
+    closePopupCountDown();
+  })
+}
+
+
+//删除倒计时
+const deleteCountdown = (countdownName) => {
+  UserCountdown_delete(countdownName).then(res => {
+    listCountdownCard();
+  })
+}
 </script>
 
 <style lang="scss">
@@ -80,7 +169,7 @@ onMounted(() => {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 82vh; /* 全屏高度 */
+  height: 40vh; /* 全屏高度 */
   padding-top: 20px; /* 上方留出一些空间 */
 }
 
@@ -108,6 +197,14 @@ onMounted(() => {
   font-weight: bold;
   margin-top: 30rpx;
   color: #7e1671;
+}
+
+.popupCountDown{
+  height: 700rpx;
+  width: 700rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
 }
 
 
