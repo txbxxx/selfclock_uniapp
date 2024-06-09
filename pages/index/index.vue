@@ -13,6 +13,11 @@
       <view v-if="topath === 'calendar'">
         <SchedulePage />
       </view>
+	  
+      <view v-if="topath === 'deskmate'">
+     
+      </view>
+	  
     </view>
     <uv-tabbar
         :value="value"
@@ -44,7 +49,8 @@ import { ref } from 'vue';
 const DataTabbars = ref([
   { name: '首页', icon: 'home', path: 'indexPage' },
   { name: "日程", icon: "calendar", path: 'calendar' },
-  { name: "任务", icon: "bell", path: "task" }
+  { name: "任务", icon: "bell", path: "task" },
+  { name: "同桌", icon: "account", path: "deskmate" }
 ]);
 
 const value = ref(0);
