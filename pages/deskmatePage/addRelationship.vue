@@ -36,7 +36,7 @@ const {friendname,relationship} = toRefs(relathionshipFrom)
 const submitRelationship = () =>{
    const res = BindRelationship(friendname.value,relationship.value).then(
    uni.redirectTo({
-     url: 'pages/deskmatePage/deskmatePage'
+     url: '/pages/deskmatePage/deskmatePage'
    })
   )
 }

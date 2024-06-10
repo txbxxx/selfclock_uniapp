@@ -14,5 +14,5 @@ export {listTask,addTask,deleteTask,updateTask,updateTaskStatus,searchTask} from
 export {listCountdownCard,addCountdownCard,deleteCountdownCard,updateCountdownCard} from './countdowncard'
 
 //关系
-export {judgeRelationship,bindRelationship,listRelationship} from './relationship'
+export {judgeRelationship,bindRelationship,listRelationship,deleteRelationship} from './relationship'
 

@@ -30,5 +30,17 @@ export const bindRelationship = (friendname,relationship) => {
 	})
 }
 
+//解除绑定
+export const deleteRelationship = (friendname) => {
+	return request({
+		url: api.Demo.DeleteRelationship,
+		method: 'delete',
+		data: {
+			friendname: friendname
+		}
+	})
+
+}
+
 
 

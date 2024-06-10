@@ -25,6 +25,7 @@ const request = (config) => {
 // 请求拦截器
 uni.addInterceptor('request', {
     async invoke(request) {
+        console.log(request.url);
         // 如果请求的URL是登录页面，则直接返回请求配置，不进行拦截处理
         if (request.url === '/loginUser' || request.url==='/registerUser') {
             request.url = "http://192.168.31.193:8081" + request.url;

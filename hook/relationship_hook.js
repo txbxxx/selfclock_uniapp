@@ -1,4 +1,4 @@
-import {judgeRelationship,bindRelationship,listRelationship} from "../service/index";
+import {judgeRelationship,bindRelationship,listRelationship,deleteRelationship} from "../service/index";
 
 //判断登录是否存在关系
 export async function JudgeRelationshipSearch() {
@@ -53,4 +53,23 @@ export async function BindRelationship(friendname,relationship){
         }
     })
 
+}
+
+//解除绑定
+export async function DeleteRelationship(friendname) {
+    const res = deleteRelationship(friendname)
+    console.log(res);
+    if(res.code === 200){
+        uni.showToast({
+            title: "世上没有后悔药哦！",
+            icon: "none",
+            duration: 3000
+        })
+    }else{
+        uni.showToast({
+            title: "系统出错啦（不让你们分开啦！）",
+            icon: "none",
+            duration: 3000
+        })
+    }
 }

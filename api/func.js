@@ -87,3 +87,6 @@ export const BindRelationship  = '/bindRelationship'
 
 //列出和当前用户绑定关系的用户
 export const ListRelationship = '/listRelationship'
+
+//删除关系
+export const DeleteRelationship = '/deleteRelation'
