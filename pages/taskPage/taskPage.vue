@@ -321,7 +321,6 @@ const closePopupEdit = () => {
 }
 //修改任务内容
 const submitAferData = () => {
-  console.log(updateBeforData.value.oldtaskname)
   UserTask_update(updateBeforData.value.taskFiled,updateBeforData.value.taskName,updateBeforData.value.taskLevel,updateBeforData.value.oldtaskname).then(() => {
     getTaskList()
     closePopupEdit()
@@ -358,7 +357,11 @@ const search = async (e) => {
   // 在这里处理搜索逻辑
   try {
     const res = await UserTask_search(e.value);
-    searchValue.value = res;
+    searchValue.value = res.map(task => ({
+        ...task,
+        color: getColorByLevel(task.taskLevel) // 根据任务等级设置颜色
+      })
+    );
     popupSearch.value.open();
   } catch (error) {
     console.error('搜索失败:', error);

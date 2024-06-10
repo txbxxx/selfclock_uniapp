@@ -1,4 +1,4 @@
-import {Login, Register} from "../service/index"
+import {Login, Register,GetUserById} from "../service/index"
  
 
 export  async function login(user,pwd) {
@@ -77,4 +77,19 @@ export async function register(user,pwd) {
 		})
 		console.log(err)
 	})
+}
+
+
+//通过id查询用户
+export async function getUserById(id) {
+	const res = GetUserById(id);
+	if (res === 200){
+		return res.data;
+	}else{
+		uni.showToast({
+			title: "查找失败",
+			icon: "none",
+			duration: 3000,
+		})
+	}
 }

@@ -25,3 +25,14 @@ export const Register = (user,pwd) => {
 		}
 	})
 }
+
+//通过id来查询用户
+export const GetUserById = (id) => {
+	return request({
+		url: api.Demo.GetUserById,
+		method: "get",
+		data:{
+			id: id
+		}
+	})
+}

@@ -6,7 +6,6 @@ export async function UserTask_list()
     let res = await listTask();
     if(res.code === 200)
     {
-        console.log(res.data)
         return res.data;
     }else {
         uni.showToast({

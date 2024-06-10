@@ -15,7 +15,7 @@
       </view>
 	  
       <view v-if="topath === 'deskmate'">
-     
+		<DeskmatePage />
       </view>
 	  
     </view>
@@ -44,6 +44,7 @@
 import IndexPage from "../indexPage/indexPage.vue";
 import SchedulePage from "../schedulePage/schedulePage.vue";
 import TaskPage from "../taskPage/taskPage.vue";
+import DeskmatePage from "../deskmatePage/deskmatePage.vue";
 import { ref } from 'vue';
 
 const DataTabbars = ref([

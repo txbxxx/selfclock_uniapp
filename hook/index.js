@@ -1,6 +1,6 @@
 import {UserTask_updateStatus} from "./tasklist_hook";
 
-export { login,register } from './Login';
+export { login,register,getUserById } from './Login';
 export {updateUserLearnData,getUserLearnData} from './leardate_hook';
 
 export  { UserSchedule_list,UserSchedule_query,UserSchedule_add,UserSchedule_delete} from './schedule_hook';
@@ -10,3 +10,6 @@ export {UserTask_list,UserTask_add,UserTask_delete,UserTask_update,UserTask_upda
 
 //倒计时
 export {UserCountdown_list,UserCountdown_add,UserCountdown_delete,UserCountdown_update} from './countdown_hook';
+
+//关系绑定
+export {JudgeRelationshipSearch,BindRelationship,ListRelationship} from './relationship_hook';

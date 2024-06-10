@@ -1,5 +1,5 @@
 //登录
-export { Login, Register } from './login'
+export { Login, Register ,GetUserById} from './login'
 
 //学习时间
 export { updateLearnTime, getLearnTime } from './learndate'
@@ -12,4 +12,7 @@ export {listTask,addTask,deleteTask,updateTask,updateTaskStatus,searchTask} from
 
 //倒计时卡片
 export {listCountdownCard,addCountdownCard,deleteCountdownCard,updateCountdownCard} from './countdowncard'
+
+//关系
+export {judgeRelationship,bindRelationship,listRelationship} from './relationship'
 
