@@ -12,12 +12,7 @@
     >
     </uni-nav-bar>
     <view v-if="isRelathionship===false">
-      <navigator
-        url="/pages/deskmatePage/addRelationship"
-        open-type="navigate"
-        hover-class="navigator-hover"
-      >
-      </navigator>
+      <addRelationship />
     </view>
     <view v-else >
       <view class="deskMateContainer">
@@ -50,6 +45,7 @@
 <script setup>
 import { ref,onMounted } from 'vue';
 import {JudgeRelationshipSearch,ListRelationship,DeleteRelationship} from '../../hook/index'
+import addRelationship from './addRelationship.vue';
 
 
 onMounted(async () => {

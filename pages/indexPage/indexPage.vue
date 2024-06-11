@@ -16,7 +16,7 @@
     <view class="container">
       <view>
         <view class="title">
-          <text class="title-text" style="color: #7e1671;">您已经学习了:{{ learnDate }}分钟</text>
+          <text class="title-text" style="color: #7e1671;">你已学习:{{ learnDate }}分钟</text>
         </view>
       </view>
       <view class="countdown">

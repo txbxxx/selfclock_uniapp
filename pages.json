@@ -68,21 +68,27 @@
 			"path" : "pages/taskPage/taskPage",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+
 			}
 		},
 		{
 			"path" : "pages/deskmatePage/deskmatePage",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+
 			}
 		},
 		{
 			"path" : "pages/deskmatePage/addRelationship",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+
 			}
 		}
 	],

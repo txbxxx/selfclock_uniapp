@@ -34,11 +34,8 @@ const {friendname,relationship} = toRefs(relathionshipFrom)
 
 //添加关系
 const submitRelationship = () =>{
-   const res = BindRelationship(friendname.value,relationship.value).then(
-   uni.redirectTo({
-     url: '/pages/deskmatePage/deskmatePage'
-   })
-  )
+  console.log(friendname.value,relationship.value);
+  const res = BindRelationship(friendname.value,relationship.value)
 }
 
 </script>
@@ -50,6 +47,11 @@ const submitRelationship = () =>{
 
 .btn_relation{
   width: 600rpx;
+  background-color: #8076a3;
+}
+
+.uni-easyinput__placeholder-class[data-v-09fd5285]{
+  color: #8076a3;
 }
 
 

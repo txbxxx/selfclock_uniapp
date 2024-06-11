@@ -26,6 +26,7 @@
         style="margin-top: 40rpx"
         @change="changeButton"
         activeColor="#7e1671"
+        fixed
     >
       <uv-tabbar-item
           v-for="(item, index) in DataTabbars"
