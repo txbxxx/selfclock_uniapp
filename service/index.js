@@ -1,5 +1,5 @@
 //登录
-export { Login, Register ,GetUserById} from './login'
+export { Login, Register ,GetUserById,Logout} from './login'
 
 //学习时间
 export { updateLearnTime, getLearnTime } from './learndate'

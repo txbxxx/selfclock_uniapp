@@ -36,3 +36,11 @@ export const GetUserById = (id) => {
 		}
 	})
 }
+
+//退出登录
+export const Logout = () => {
+	return request({
+		url: api.Demo.Logout,
+        method: 'get',
+	})
+}

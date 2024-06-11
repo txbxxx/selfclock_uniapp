@@ -6,6 +6,12 @@ export async function UserCountdown_list()
   let res = await listCountdownCard();
   if (res.code === 200){
       return res.data;
+  }else if(!uni.getStorageSync('satoken')){
+    uni.showToast({
+        icon: 'none',
+        title: "请先登录",
+        duration: 2000
+    });
   }else{
       uni.showToast({
           icon: 'none',

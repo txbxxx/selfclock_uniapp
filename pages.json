@@ -1,10 +1,9 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path" : "pages/login/login",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
@@ -16,82 +15,74 @@
 			}
 		},
 		{
-			"path" : "pages/content/content",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/content/content",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/indexPage/indexPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/indexPage/indexPage",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/register/register",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"navigationStyle": "custom"
-
-			}
-		},
-		{
-			"path" : "pages/schedulePage/schedulePage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/register/register",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/schedulePage/addSchedulePage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/schedulePage/schedulePage",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/schedulePage/listSchedule",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/schedulePage/addSchedulePage",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
 			}
 		},
 		{
-			"path" : "pages/taskPage/taskPage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/schedulePage/listSchedule",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
-
 			}
 		},
 		{
-			"path" : "pages/deskmatePage/deskmatePage",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/taskPage/taskPage",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
-
 			}
 		},
 		{
-			"path" : "pages/deskmatePage/addRelationship",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
+			"path": "pages/deskmatePage/deskmatePage",
+			"style": {
+				"navigationBarTitleText": "",
 				"navigationStyle": "custom"
-
+			}
+		},
+		{
+			"path": "pages/deskmatePage/addRelationship",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/userPage",
+			"style": {
+				"navigationBarTitleText": "userPage"
 			}
 		}
 	],
-	"globalStyle": {
-	}
+	"globalStyle": {}
 }

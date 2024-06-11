@@ -1,6 +1,5 @@
 // request.js
 
-
 // 封装请求方法
 const request = (config) => {
     return new Promise((resolve, reject) => {
@@ -25,25 +24,33 @@ const request = (config) => {
 // 请求拦截器
 uni.addInterceptor('request', {
     async invoke(request) {
-        console.log(request.url);
-        // 如果请求的URL是登录页面，则直接返回请求配置，不进行拦截处理
-        if (request.url === '/loginUser' || request.url==='/registerUser') {
-            request.url = "http://192.168.31.193:8081" + request.url;
+        try {
+            const key = uni.getStorageSync('satoken');
+            const baseUrl = "http://192.168.31.193:8081";
+
+            if (request.url === '/loginUser' || request.url === '/registerUser') {
+                request.url = baseUrl + request.url;
+            } else if (key) {
+                console.log("拦截成功！");
+                console.log("获取 satoken: " + key);
+                request.url = baseUrl + request.url;
+                request.header = {
+                    ...request.header,
+                    'satoken': key
+                };
+            } else {
+                uni.redirectTo({
+                     url: '/pages/login/login'
+                });
+                uni.showToast({ title: "请登录" })
+            }
+
+            // console.log('请求拦截器 - 发送请求后:', request);
             return request;
+        } catch (error) {
+            console.error('请求拦截器错误:', error);
+            return Promise.reject(error);
         }
-        // 在发送请求之前做些什么
-        request.url = "http://192.168.31.193:8081" + request.url;
-
-
-        // 在这里可以对请求参数进行修改等操作
-        request.header = {
-            ...request.header,
-            'satoken': uni.getStorageSync('satoken')
-        };
-
-        // console.log('请求拦截器 - 发送请求后:', request);
-        // 返回修改后的请求配置
-        return request;
     }
 });
 
@@ -59,8 +66,10 @@ uni.addInterceptor('response', {
                 title: '请求失败',
                 icon: 'none'
             });
+            return Promise.reject(new Error(`请求失败，状态码：${response.statusCode}`));
         }
-        // 返回修改后的响应数据
+
+        // 返回响应数据
         return response;
     }
 });

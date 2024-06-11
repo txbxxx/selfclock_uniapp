@@ -9,7 +9,13 @@ export async function UserSchedule_list() {
 
         if (res.code === 200) {
             return res.data; // 直接返回数组数据
-        } else {
+        }else if(!uni.getStorageSync('satoken')){
+            uni.showToast({
+                icon: 'none',
+                title: "请先登录",
+                duration: 2000
+            });
+          } else {
             uni.showToast({
                 title: res.data,
                 icon: "none",

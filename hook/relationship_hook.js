@@ -5,6 +5,12 @@ export async function JudgeRelationshipSearch() {
   const res = await judgeRelationship();
   if (res.code === 200) {
     return res.data;
+  }else if(!uni.getStorageSync('satoken')){
+    uni.showToast({
+        icon: 'none',
+        title: "请先登录",
+        duration: 2000
+    });
   } else {
     console.log(res);
     uni.showToast({

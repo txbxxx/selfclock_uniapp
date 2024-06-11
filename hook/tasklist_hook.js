@@ -7,12 +7,18 @@ export async function UserTask_list()
     if(res.code === 200)
     {
         return res.data;
-    }else {
+    }else if(!uni.getStorageSync('satoken')){
         uni.showToast({
-            title: res.msg,
             icon: 'none',
+            title: "请先登录",
             duration: 2000
         });
+    }else {
+    uni.showToast({
+        title: res.msg,
+        icon: 'none',
+        duration: 2000
+    });
     }
 }
 

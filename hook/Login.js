@@ -1,4 +1,4 @@
-import {Login, Register,GetUserById} from "../service/index"
+import {Login, Register,GetUserById,Logout} from "../service/index"
  
 
 export  async function login(user,pwd) {
@@ -88,6 +88,24 @@ export async function getUserById(id) {
 	}else{
 		uni.showToast({
 			title: "查找失败",
+			icon: "none",
+			duration: 3000,
+		})
+	}
+}
+
+//登出
+export async function logout() {
+	const res = await Logout();
+	if(res.code === 200){
+		uni.clearStorage();
+		uni.redirectTo({
+			url: "/pages/login/login"
+		})
+	}else{
+		console.log(res);
+		uni.showToast({
+			title: "登录失败",
 			icon: "none",
 			duration: 3000,
 		})

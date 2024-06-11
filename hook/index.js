@@ -1,6 +1,6 @@
 import {UserTask_updateStatus} from "./tasklist_hook";
 
-export { login,register,getUserById } from './Login';
+export { login,register,getUserById,logout} from './Login';
 export {updateUserLearnData,getUserLearnData} from './leardate_hook';
 
 export  { UserSchedule_list,UserSchedule_query,UserSchedule_add,UserSchedule_delete} from './schedule_hook';

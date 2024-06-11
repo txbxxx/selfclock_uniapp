@@ -15,9 +15,11 @@
       </view>
 	  
       <view v-if="topath === 'deskmate'">
-		<DeskmatePage />
+		    <DeskmatePage />
       </view>
-	  
+      <view v-if="topath === 'user'">
+		    <UserPage />
+      </view>
     </view>
     <uv-tabbar
         :value="value"
@@ -46,13 +48,15 @@ import IndexPage from "../indexPage/indexPage.vue";
 import SchedulePage from "../schedulePage/schedulePage.vue";
 import TaskPage from "../taskPage/taskPage.vue";
 import DeskmatePage from "../deskmatePage/deskmatePage.vue";
+import UserPage from "../userPage.vue";
 import { ref } from 'vue';
 
 const DataTabbars = ref([
   { name: '首页', icon: 'home', path: 'indexPage' },
   { name: "日程", icon: "calendar", path: 'calendar' },
   { name: "任务", icon: "bell", path: "task" },
-  { name: "同桌", icon: "account", path: "deskmate" }
+  { name: "同桌", icon: "account", path: "deskmate" },
+  { name: "用户设置", icon: "setting", path: "user" }
 ]);
 
 const value = ref(0);
